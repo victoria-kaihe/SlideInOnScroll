@@ -57,6 +57,20 @@
         if (callNow) func.apply(context, args);
       };
     }
+
+    const sliderImages = document.querySelectorAll('.slide-in')
+
+    function checkSlide(e) {
+      sliderImages.forEach(slideImage => {
+        const slideInAt = (window.scrollY + window.innerHeight) - slideImage.height / 2
+        const imageBottom = sliderImage.offsetTop+ sliderImage.height
+      })
+    }
+
+    window.addEventListener('scroll', debounce(checkSlide))
+
+
+
   </script>
 
   <style>
